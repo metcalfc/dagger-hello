@@ -1,10 +1,10 @@
 
 tasks:
   - init: |
-      go get github.com/spf13/cobra/cobra
-      go build
+      curl -L https://dl.dagger.io/dagger/install.sh | sh 
     command: |
-      ./mycli --help
+      $PWD/bin/dagger project update
+      $PWD/bin/dagger do build
 vscode:
   extensions:
     - golang.go
